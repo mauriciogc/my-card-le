@@ -36,28 +36,14 @@ You will also see any lint errors in the console.
 <script type="module">
 	/** Watch the demo for more examples **/
 	import "my-card-le/my-card-le";
-
-	const data = {
-		title: "Mulan",
-		genre: ["Action", "Adventure", "Drama", "Fantasy", "War"],
-		date: "2020",
-		vote: 7.6,
-		description:
-			"When the Emperor of China issues a decree that one man per family must serve in the Imperial Chinese Army to defend the country from Huns, Hua Mulan, the eldest daughter of an honored warrior, steps in to take the place of her ailing father. She is spirited, determined and quick on her feet. Disguised as a man by the name of Hua Jun, she is tested every step of the way and must harness her innermost strength and embrace her true potential.",
-		poster:
-			"//image.tmdb.org/t/p/w220_and_h330_face/aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg",
-		backdrop:
-			"//image.tmdb.org/t/p/w1920_and_h800_multi_faces/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg",
-	};
-
 	<my-card-le
-			.title=${title}
-			.genre=${genre}
-			.date=${date}
-			.vote=${vote}
-			.description=${description}
-			.poster=${poster}
-			.backdrop=${backdrop}
+			.title=${"Mulan"}
+			.genre=${["Action", "Adventure"]}
+			.date=${"2020"}
+			.vote=${7.1}
+			.description=${"When the Emperor of China issues a decree that one man per family..."}
+			.poster=${"//image.tmdb.org/t/p/w220_and_h330_face/aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg"}
+			.backdrop=${"//image.tmdb.org/t/p/w1920_and_h800_multi_faces/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg"}
 		>
 		</my-card-le>
 </script>
