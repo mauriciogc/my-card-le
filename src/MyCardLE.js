@@ -11,11 +11,23 @@ export class MyCardLE extends LitElement {
 			* {
 				box-sizing: border-box;
 				margin: 0;
+				--global-font-size: var(--mcle-global-font-size);
+				--primary-color: var(--mcle-primary-color, #fff);
+				--secondary-color: var(--mcle-secondary-color, #dadada);
+				--tertiary-color: var(--mcle-tertiary-color, #545454);
+				--background-linear-gradient-1: var(
+					--mcle-bg-linear-gradient-1,
+					#e5e6e6
+				);
+				--background-linear-gradient-2: var(
+					--mcle-bg-linear-gradient-2,
+					transparent
+				);
 			}
 			:host {
 				background: white;
 				font-family: "Montserrat", helvetica, arial, sans-serif;
-				font-size: 12px;
+				font-size: var(--global-font-size, 12px);
 				font-weight: 400;
 				display: inline-block;
 			}
@@ -33,7 +45,11 @@ export class MyCardLE extends LitElement {
 				width: 450px;
 			}
 			.info_section {
-				background: linear-gradient(to top, #e5e6e6 20%, transparent 100%);
+				background: linear-gradient(
+					to top,
+					var(--background-linear-gradient-1) 20%,
+					var(--background-linear-gradient-2) 100%
+				);
 				display: inline-block;
 				height: 100%;
 				position: relative;
@@ -46,26 +62,26 @@ export class MyCardLE extends LitElement {
 				margin-top: 5px;
 			}
 			.movie_header h1 {
-				color: #fff;
+				color: var(--primary-color);
 				font-size: 2.3em;
 				font-weight: 400;
 			}
 			.movie_header h4 {
-				color: #dadada;
+				color: var(--secondary-color);
 				font-size: 1.5em;
 				font-weight: 400;
 			}
 			.movie_header .rating {
 				display: inline-block;
 				margin-top: 15px;
-				color: #dadada;
+				color: var(--secondary-color);
 				padding: 5px;
 				border: 1px solid rgba(255, 255, 255, 0.5);
 			}
 			.movie_header .type {
 				margin-top: 10px;
 				display: block;
-				color: #dadada;
+				color: var(--secondary-color);
 				font-size: 0.8em;
 			}
 			.movie_header .locandina {
@@ -81,7 +97,7 @@ export class MyCardLE extends LitElement {
 				line-height: 20px;
 				padding: 25px;
 				width: 100%;
-				color: #545454;
+				color: var(--tertiary-color);
 			}
 			.blur_back {
 				background-position: 50% 50%;
